@@ -2,4 +2,6 @@ parameters:
     ignoreErrors:
         -
             identifier: missingType.iterableValue
+        -
+            identifier: offsetAccess.notFound
     level: 7
