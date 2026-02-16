@@ -148,8 +148,14 @@ class AbstractProductsCategoriesReader implements AbstractProductsCategoriesRead
 
         $productCategoryNodeIds = [];
         foreach ($productAbstractCategoryStorageTransfers as $productAbstractCategoryStorageTransfer) {
+            $idProductAbstract = $productAbstractCategoryStorageTransfer->getIdProductAbstract();
+
+            if ($idProductAbstract === null || !isset($productAbstractIds[$idProductAbstract])) {
+                continue;
+            }
+
             foreach ($productAbstractCategoryStorageTransfer->getCategories() as $productCategoryStorageTransfer) {
-                $productCategoryNodeIds[$productAbstractIds[$productAbstractCategoryStorageTransfer->getIdProductAbstract()]][]
+                $productCategoryNodeIds[$productAbstractIds[$idProductAbstract]][]
                     = $productCategoryStorageTransfer->getCategoryNodeId();
             }
         }
