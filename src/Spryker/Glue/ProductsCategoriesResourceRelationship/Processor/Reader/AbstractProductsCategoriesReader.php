@@ -43,11 +43,6 @@ class AbstractProductsCategoriesReader implements AbstractProductsCategoriesRead
      */
     protected $storeClient;
 
-    /**
-     * @param \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToProductStorageClientInterface $productStorageClient
-     * @param \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToProductCategoryStorageClientInterface $productCategoryStorageClient
-     * @param \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToStoreClientInterface $storeClient
-     */
     public function __construct(
         ProductsCategoriesResourceRelationshipToProductStorageClientInterface $productStorageClient,
         ProductsCategoriesResourceRelationshipToProductCategoryStorageClientInterface $productCategoryStorageClient,
@@ -100,12 +95,6 @@ class AbstractProductsCategoriesReader implements AbstractProductsCategoriesRead
         return $this->getBulkProductCategoryNodeIds($productAbstractData, $localeName);
     }
 
-    /**
-     * @param array $abstractProductData
-     * @param string $locale
-     *
-     * @return array
-     */
     protected function getProductCategoryNodeIds(array $abstractProductData, string $locale): array
     {
         $productCategoryNodeIds = [];
@@ -127,12 +116,6 @@ class AbstractProductsCategoriesReader implements AbstractProductsCategoriesRead
         return $productCategoryNodeIds;
     }
 
-    /**
-     * @param array $abstractProductData
-     * @param string $localeName
-     *
-     * @return array
-     */
     protected function getBulkProductCategoryNodeIds(array $abstractProductData, string $localeName): array
     {
         $productAbstractIds = [];

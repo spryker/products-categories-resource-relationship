@@ -23,10 +23,6 @@ class CategoriesResourceRelationshipExpander implements CategoriesResourceRelati
      */
     protected $abstractProductsCategoriesReader;
 
-    /**
-     * @param \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\RestResource\ProductsCategoriesResourceRelationToCategoriesRestApiResourceInterface $categoriesRestApiResource
-     * @param \Spryker\Glue\ProductsCategoriesResourceRelationship\Processor\Reader\AbstractProductsCategoriesReaderInterface $abstractProductsCategoriesReader
-     */
     public function __construct(
         ProductsCategoriesResourceRelationToCategoriesRestApiResourceInterface $categoriesRestApiResource,
         AbstractProductsCategoriesReaderInterface $abstractProductsCategoriesReader

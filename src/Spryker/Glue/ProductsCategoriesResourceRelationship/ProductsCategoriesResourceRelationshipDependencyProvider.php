@@ -39,11 +39,6 @@ class ProductsCategoriesResourceRelationshipDependencyProvider extends AbstractB
      */
     public const CLIENT_STORE = 'CLIENT_STORE';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         parent::provideDependencies($container);
@@ -55,11 +50,6 @@ class ProductsCategoriesResourceRelationshipDependencyProvider extends AbstractB
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addCategoriesResource(Container $container): Container
     {
         $container->set(static::RESOURCE_CATEGORY, function (Container $container) {
@@ -71,11 +61,6 @@ class ProductsCategoriesResourceRelationshipDependencyProvider extends AbstractB
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRODUCT_STORAGE, function (Container $container) {
@@ -87,11 +72,6 @@ class ProductsCategoriesResourceRelationshipDependencyProvider extends AbstractB
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductCategoryStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRODUCT_CATEGORY_STORAGE, function (Container $container) {
@@ -103,11 +83,6 @@ class ProductsCategoriesResourceRelationshipDependencyProvider extends AbstractB
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addStoreClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORE, function (Container $container) {

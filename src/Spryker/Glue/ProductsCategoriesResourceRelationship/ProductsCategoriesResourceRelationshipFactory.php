@@ -19,17 +19,11 @@ use Spryker\Glue\ProductsCategoriesResourceRelationship\Processor\Reader\Abstrac
 
 class ProductsCategoriesResourceRelationshipFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\RestResource\ProductsCategoriesResourceRelationToCategoriesRestApiResourceInterface
-     */
     public function getCategoriesResource(): ProductsCategoriesResourceRelationToCategoriesRestApiResourceInterface
     {
         return $this->getProvidedDependency(ProductsCategoriesResourceRelationshipDependencyProvider::RESOURCE_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Processor\Expander\CategoriesResourceRelationshipExpanderInterface
-     */
     public function createAbstractProductsCategoriesResourceRelationshipExpander(): CategoriesResourceRelationshipExpanderInterface
     {
         return new CategoriesResourceRelationshipExpander(
@@ -38,25 +32,16 @@ class ProductsCategoriesResourceRelationshipFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToProductStorageClientInterface
-     */
     public function getProductStorageClient(): ProductsCategoriesResourceRelationshipToProductStorageClientInterface
     {
         return $this->getProvidedDependency(ProductsCategoriesResourceRelationshipDependencyProvider::CLIENT_PRODUCT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToProductCategoryStorageClientInterface
-     */
     public function getProductCategoryStorageClient(): ProductsCategoriesResourceRelationshipToProductCategoryStorageClientInterface
     {
         return $this->getProvidedDependency(ProductsCategoriesResourceRelationshipDependencyProvider::CLIENT_PRODUCT_CATEGORY_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Processor\Reader\AbstractProductsCategoriesReaderInterface
-     */
     public function createAbstractProductsCategoriesReader(): AbstractProductsCategoriesReaderInterface
     {
         return new AbstractProductsCategoriesReader(
@@ -66,9 +51,6 @@ class ProductsCategoriesResourceRelationshipFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsCategoriesResourceRelationship\Dependency\Client\ProductsCategoriesResourceRelationshipToStoreClientInterface
-     */
     public function getStoreClient(): ProductsCategoriesResourceRelationshipToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductsCategoriesResourceRelationshipDependencyProvider::CLIENT_STORE);
