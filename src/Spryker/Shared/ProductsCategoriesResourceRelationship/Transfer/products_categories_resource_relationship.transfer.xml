@@ -14,4 +14,18 @@
         <property name="name" type="string"/>
     </transfer>
 
+    <transfer name="CategoryNodeStorage">
+        <property name="idCategory" type="int"/>
+        <property name="nodeId" type="int"/>
+        <property name="name" type="string"/>
+        <property name="url" type="string"/>
+        <property name="isActive" type="bool"/>
+        <property name="order" type="int"/>
+        <property name="metaTitle" type="string"/>
+        <property name="metaDescription" type="string"/>
+        <property name="metaKeywords" type="string"/>
+        <property name="parents" type="CategoryNodeStorage[]" singular="parents"/>
+        <property name="children" type="CategoryNodeStorage[]" singular="children"/>
+    </transfer>
+
 </transfers>
