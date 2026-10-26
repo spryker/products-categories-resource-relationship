@@ -28,4 +28,8 @@
         <property name="children" type="CategoryNodeStorage[]" singular="children"/>
     </transfer>
 
+    <transfer name="Locale">
+        <property name="localeName" type="string"/>
+    </transfer>
+
 </transfers>
